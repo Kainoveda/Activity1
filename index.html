@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+    
+</head>
+<body>
+    <script>
+        function onSubmit(){
+
+let email = document.getElementById('email').value;
+let uname = document.getElementById('uname').value;
+let pass = document.getElementById('pass').value;
+let conpass = document.getElementById('conpass').value;
+
+
+localStorage.setItem('email',email);
+localStorage.setItem('uname',uname);
+localStorage.setItem('pass',pass);
+localStorage.setItem('conpass',conpass);
+}
+    </script>
+    <form class="box" id="form" onsubmit="onSubmit()">
+        <div class="signcon">
+            <h1 class="text">Sign up</h1>
+        </div>
+        <div class="input-control">
+            <label class="label">Email</label><br>
+            <input type="text" name="email" class="input" placeholder="Email Address" id="email"><br>
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label class="label">Username</label><br>
+            <input type="text" name=username class="input" placeholder="Username" id="uname"><br>
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+             <label class="label">Password</label><br>
+            <input type="password" name=password class="input" placeholder="Password" id="pass"><br>
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label  class="label">Confirm Password</label><br>
+            <input type="password" name="conpassword" class="input" placeholder="Confirm Password" id="conpass"><br>
+            <div class="error"></div>
+        </div>
+     <input type="submit" name="submit"class="button">
+   </form>
+</body>
+</html>
